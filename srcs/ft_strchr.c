@@ -6,11 +6,11 @@
 /*   By: hsaadaou <hsaadaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 22:33:13 by hsaadaou          #+#    #+#             */
-/*   Updated: 2020/11/18 13:07:11 by hsaadaou         ###   ########.fr       */
+/*   Updated: 2020/11/18 14:40:58 by hsaadaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {

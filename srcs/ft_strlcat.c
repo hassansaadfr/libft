@@ -1,30 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hsaadaou <hsaadaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/17 15:25:38 by hsaadaou          #+#    #+#             */
-/*   Updated: 2020/11/18 20:03:11 by hsaadaou         ###   ########.fr       */
+/*   Created: 2020/11/18 18:02:15 by hsaadaou          #+#    #+#             */
+/*   Updated: 2020/11/18 20:04:19 by hsaadaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char			*ft_strrchr(const char *string, int c)
+size_t		ft_strlcat(char *dest, const char *src, size_t size)
 {
-	size_t		len;
-	char		*str;
+	size_t	i;
+	size_t	j;
+	size_t	k;
 
-	str = (char*)string;
-	len = ft_strlen(str);
-	if (c == '\0')
-		return (str);
-	while (len--)
+	i = 0;
+	while (dest[i])
+		i++;
+	k = 0;
+	while (src[k])
+		k++;
+	if (size <= i)
+		return (k + size);
+	j = 0;
+	while (src[j] && j + i < size - 1)
 	{
-		if (str[len] == c)
-			return (&(*(str + len)));
+		dest[i + j] = src[j];
+		j++;
 	}
-	return (0);
+	dest[i + j] = '\0';
+	return (i + k);
 }
