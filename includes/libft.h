@@ -6,7 +6,7 @@
 /*   By: hsaadaou <hsaadaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 22:05:45 by hsaadaou          #+#    #+#             */
-/*   Updated: 2020/11/18 20:08:34 by hsaadaou         ###   ########.fr       */
+/*   Updated: 2020/11/18 22:33:05 by hsaadaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,6 @@ int					ft_isdigit(char c);
 int					ft_isalnum(char c);
 int					ft_isascii(char c);
 int					ft_isprint(char c);
+void				*ft_memset(void *s, int c, size_t n);
 
 #endif
