@@ -6,7 +6,7 @@
 #    By: hsaadaou <hsaadaou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/16 22:04:03 by hsaadaou          #+#    #+#              #
-#    Updated: 2020/11/16 22:04:07 by hsaadaou         ###   ########.fr        #
+#    Updated: 2020/11/19 13:22:44 by hsaadaou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,9 +16,9 @@ FLAGS	= -Wall -Wextra -Werror
 
 NAME	= libft.a
 
-SRCS	= $(wildcard srcs/*.c)
+SRCS	= $(wildcard *.c)
 
-HEADERS	= includes
+HEADERS	= .
 
 OBJECTS	= ${SRCS:.c=.o}
 
