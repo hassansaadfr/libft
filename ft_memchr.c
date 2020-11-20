@@ -1,16 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hsaadaou <hsaadaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/18 20:00:50 by hsaadaou          #+#    #+#             */
-/*   Updated: 2020/11/20 01:20:03 by hsaadaou         ###   ########.fr       */
+/*   Created: 2020/11/20 01:33:20 by hsaadaou          #+#    #+#             */
+/*   Updated: 2020/11/20 01:53:24 by hsaadaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isalpha(char c)
+#include "libft.h"
+
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
+	size_t	i;
+
+	i = 0;
+	if (!n)
+		return (NULL);
+	while (i < n)
+	{
+		if (((char*)s)[i] == c)
+			return ((char*)s + i);
+		i++;
+	}
+	return (NULL);
 }

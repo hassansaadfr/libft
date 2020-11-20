@@ -6,11 +6,11 @@
 #    By: hsaadaou <hsaadaou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/16 22:04:03 by hsaadaou          #+#    #+#              #
-#    Updated: 2020/11/19 13:22:44 by hsaadaou         ###   ########.fr        #
+#    Updated: 2020/11/20 00:41:46 by hsaadaou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC		= gcc
+CC		= clang
 
 FLAGS	= -Wall -Wextra -Werror
 
