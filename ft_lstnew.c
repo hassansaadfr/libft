@@ -1,19 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_bonus.c                                  :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hsaadaou <hsaadaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/21 21:40:30 by hsaadaou          #+#    #+#             */
-/*   Updated: 2020/11/21 22:42:10 by hsaadaou         ###   ########.fr       */
+/*   Created: 2020/11/21 22:05:34 by hsaadaou          #+#    #+#             */
+/*   Updated: 2020/11/21 22:09:46 by hsaadaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_bonus.h"
+#include "libft.h"
 
-void	ft_putstr(char *str)
+t_list	*ft_lstnew(void *content)
 {
-	while (*str && write(1, str++, 1))
-		;
+	t_list *lst;
+
+	if (!(lst = malloc(sizeof(lst))))
+		return (NULL);
+	lst->content = content;
+	lst->next = NULL;
+	return (lst);
 }

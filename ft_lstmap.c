@@ -1,19 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_bonus.c                                  :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hsaadaou <hsaadaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/21 21:40:30 by hsaadaou          #+#    #+#             */
-/*   Updated: 2020/11/21 22:42:10 by hsaadaou         ###   ########.fr       */
+/*   Created: 2020/11/21 22:30:13 by hsaadaou          #+#    #+#             */
+/*   Updated: 2020/11/21 22:53:02 by hsaadaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_bonus.h"
+#include "libft.h"
 
-void	ft_putstr(char *str)
+t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*d)(void *))
 {
-	while (*str && write(1, str++, 1))
-		;
+	t_list	*new_lst;
+	t_list	*new_elem;
+
+	if (!f || !d)
+		return (NULL);
+	new_lst = NULL;
+	while (lst)
+	{
+		if (!(new_elem = ft_lstnew(f(lst->content))))
+		{
+			ft_lstclear(&new_lst, d);
+			return (NULL);
+		}
+		ft_lstadd_back(&new_lst, new_elem);
+		lst = lst->next;
+	}
+	return (new_lst);
 }

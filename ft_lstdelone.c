@@ -1,19 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_bonus.c                                  :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hsaadaou <hsaadaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/21 21:40:30 by hsaadaou          #+#    #+#             */
-/*   Updated: 2020/11/21 22:42:10 by hsaadaou         ###   ########.fr       */
+/*   Created: 2020/11/21 22:30:35 by hsaadaou          #+#    #+#             */
+/*   Updated: 2020/11/21 22:41:57 by hsaadaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_bonus.h"
+#include "libft.h"
 
-void	ft_putstr(char *str)
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	while (*str && write(1, str++, 1))
-		;
+	if (!lst)
+		return ;
+	if (del)
+		(del)(lst->content);
+	free(lst);
 }

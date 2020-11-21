@@ -6,7 +6,7 @@
 #    By: hsaadaou <hsaadaou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/16 22:04:03 by hsaadaou          #+#    #+#              #
-#    Updated: 2020/11/21 22:02:31 by hsaadaou         ###   ########.fr        #
+#    Updated: 2020/11/21 23:01:59 by hsaadaou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,7 +41,7 @@ ${NAME} :		${OBJECTS}
 				ar rc libft.a ${OBJECTS}
 
 clean:
-				rm -rf ${OBJECTS}
+				rm -rf ${OBJECTS} ${BONUS_OBJS}
 
 fclean:			clean
 				rm -rf $(NAME)

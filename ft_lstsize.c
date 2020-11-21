@@ -1,19 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_bonus.c                                  :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hsaadaou <hsaadaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/21 21:40:30 by hsaadaou          #+#    #+#             */
-/*   Updated: 2020/11/21 22:42:10 by hsaadaou         ###   ########.fr       */
+/*   Created: 2020/11/21 22:17:38 by hsaadaou          #+#    #+#             */
+/*   Updated: 2020/11/21 22:22:52 by hsaadaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_bonus.h"
+#include "libft.h"
 
-void	ft_putstr(char *str)
+int		ft_lstsize(t_list *lst)
 {
-	while (*str && write(1, str++, 1))
-		;
+	t_list	*current;
+	int		i;
+
+	i = 0;
+	current = lst;
+	if (!current)
+		return (0);
+	while (current)
+	{
+		i++;
+		current = current->next;
+	}
+	return (i);
 }

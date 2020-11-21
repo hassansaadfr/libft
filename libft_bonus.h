@@ -6,12 +6,12 @@
 /*   By: hsaadaou <hsaadaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 22:05:45 by hsaadaou          #+#    #+#             */
-/*   Updated: 2020/11/21 21:40:20 by hsaadaou         ###   ########.fr       */
+/*   Updated: 2020/11/21 22:42:35 by hsaadaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef LIBFT_BONUS_H
+# define LIBFT_BONUS_H
 
 # include <string.h>
 # include <stdlib.h>
