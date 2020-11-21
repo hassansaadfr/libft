@@ -6,7 +6,7 @@
 /*   By: hsaadaou <hsaadaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/21 01:24:08 by hsaadaou          #+#    #+#             */
-/*   Updated: 2020/11/21 01:38:43 by hsaadaou         ###   ########.fr       */
+/*   Updated: 2020/11/21 17:32:30 by hsaadaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static size_t	ft_is_in_set(char const c, char const *set)
 char			*ft_strtrim(char const *s1, char const *set)
 {
 	int				i;
-	size_t			size;
+	unsigned int	size;
 	char			*start;
 	char			*end;
 	char			*dest;
