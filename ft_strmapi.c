@@ -6,7 +6,7 @@
 /*   By: hsaadaou <hsaadaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/21 17:16:35 by hsaadaou          #+#    #+#             */
-/*   Updated: 2020/11/21 17:40:07 by hsaadaou         ###   ########.fr       */
+/*   Updated: 2020/11/22 19:25:30 by hsaadaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,9 @@ char			*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	int				size;
 
 	i = 0;
-	size = ft_strlen((char*)s);
-	if (s == NULL || f == NULL)
+	if (!s || !f)
 		return (NULL);
+	size = ft_strlen((char*)s);
 	if (!(out = (char*)malloc(sizeof(char) * size + 1)))
 		return (NULL);
 	ft_strcpy(out, (char*)s);
