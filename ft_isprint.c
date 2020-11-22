@@ -6,11 +6,11 @@
 /*   By: hsaadaou <hsaadaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 20:08:49 by hsaadaou          #+#    #+#             */
-/*   Updated: 2020/11/18 20:08:51 by hsaadaou         ###   ########.fr       */
+/*   Updated: 2020/11/22 17:31:55 by hsaadaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isprint(char c)
+int		ft_isprint(int c)
 {
 	return (c >= 32 && c <= 126);
 }

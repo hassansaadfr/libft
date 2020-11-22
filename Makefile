@@ -6,7 +6,7 @@
 #    By: hsaadaou <hsaadaou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/16 22:04:03 by hsaadaou          #+#    #+#              #
-#    Updated: 2020/11/21 23:01:59 by hsaadaou         ###   ########.fr        #
+#    Updated: 2020/11/22 18:21:38 by hsaadaou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ HEADERS		=	.
 
 OBJECTS		=	${SRCS:.c=.o}
 
-BONUS		=	$(wildcard *_bonus.c) $(wildcard ft_lst*.c)
+BONUS		=	$(wildcard ft_lst*.c)
 
 BONUS_OBJS	=	$(BONUS:.c=.o)
 
@@ -37,7 +37,7 @@ all:			$(NAME)
 .c.o:
 				${CC} ${FLAGS} -I ${HEADERS} -c $< -o ${<:.c=.o}
 
-${NAME} :		${OBJECTS}
+$(NAME) :		${OBJECTS}
 				ar rc libft.a ${OBJECTS}
 
 clean:

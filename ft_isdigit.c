@@ -6,11 +6,11 @@
 /*   By: hsaadaou <hsaadaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 20:05:19 by hsaadaou          #+#    #+#             */
-/*   Updated: 2020/11/18 20:05:24 by hsaadaou         ###   ########.fr       */
+/*   Updated: 2020/11/22 17:31:49 by hsaadaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isdigit(char c)
+int		ft_isdigit(int c)
 {
 	return (c >= '0' && c <= '9');
 }

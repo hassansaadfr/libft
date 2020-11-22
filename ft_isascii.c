@@ -6,11 +6,11 @@
 /*   By: hsaadaou <hsaadaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 20:07:55 by hsaadaou          #+#    #+#             */
-/*   Updated: 2020/11/18 20:08:01 by hsaadaou         ###   ########.fr       */
+/*   Updated: 2020/11/22 17:31:12 by hsaadaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isascii(char c)
+int		ft_isascii(int c)
 {
 	return (c >= 0 && c <= 127);
 }

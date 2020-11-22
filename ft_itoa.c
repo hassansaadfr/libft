@@ -6,7 +6,7 @@
 /*   By: hsaadaou <hsaadaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/21 17:03:10 by hsaadaou          #+#    #+#             */
-/*   Updated: 2020/11/21 17:13:15 by hsaadaou         ###   ########.fr       */
+/*   Updated: 2020/11/22 17:33:11 by hsaadaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ char			*ft_itoa(int nb)
 
 	nbr = nb;
 	len = ft_nb_len(nbr);
-	if (!(str = (char*)malloc(sizeof(char) * (len + 1))))
+	if (!(str = (char*)malloc(sizeof(char) * (len + 2))))
 		return (NULL);
 	str[len--] = '\0';
 	if (nbr == 0)
