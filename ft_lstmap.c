@@ -6,7 +6,7 @@
 /*   By: hsaadaou <hsaadaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/21 22:30:13 by hsaadaou          #+#    #+#             */
-/*   Updated: 2020/11/22 18:43:09 by hsaadaou         ###   ########.fr       */
+/*   Updated: 2020/11/24 16:41:16 by hsaadaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*d)(void *))
 	t_list	*new_lst;
 	t_list	*new_elem;
 
-	if (!f || !d)
-		return (NULL);
 	new_lst = NULL;
 	while (lst)
 	{
